@@ -126,7 +126,7 @@ class UserController extends Controller
 
         $data = $req->except(Qs::getStaffRecord());
         $data['name'] = ucwords($req->name);
-
+        $data['code'] = strtoupper(Str::random(10));
         if($user_is_staff && !$user_is_teamSA){
             $data['username'] = Qs::getAppCode().'/STAFF/'.date('Y/m', strtotime($req->emp_date)).'/'.mt_rand(1000, 9999);
         }

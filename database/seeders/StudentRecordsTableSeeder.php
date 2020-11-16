@@ -26,7 +26,7 @@ class StudentRecordsTableSeeder extends Seeder
         $sections = Section::all();
 
         foreach ($sections as $section){
-          User::factory()
+                User::factory()
                 ->has(
                     StudentRecord::factory()
                     ->state([

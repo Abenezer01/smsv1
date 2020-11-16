@@ -2,13 +2,12 @@
 
 namespace App\Repositories;
 
-use App\models\TimeSlot;
-use App\models\TimeTable;
-use App\models\TimeTableRecord;
+use App\Models\TimeSlot;
+use App\Models\TimeTable;
+use App\Models\TimeTableRecord;
 
 class TimeTableRepo
 {
-
     public function getTimeTable($where)
     {
         return TimeTable::with(['subject', 'time_slot'])->orderBy('timestamp_from')->where($where)->get();

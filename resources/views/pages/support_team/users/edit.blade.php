@@ -67,7 +67,11 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Date of Employment:</label>
-                                    <input autocomplete="off" name="emp_date" value="{{ $user->staff->first()->emp_date }}" type="text" class="form-control date-pick" placeholder="Select Date...">
+                                    @if(isset($user->staff->first()->emp_date))
+                                        <input autocomplete="off" name="emp_date" value="{{ $user->staff->first()->emp_date }}" type="text" class="form-control date-pick" placeholder="Select Date...">                                        
+                                    @else
+                                        <input autocomplete="off" name="emp_date" value="" type="text" class="form-control date-pick" placeholder="Select Date...">                                        
+                                    @endif
 
                                 </div>
                             </div>

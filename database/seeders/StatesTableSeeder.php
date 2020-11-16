@@ -13,7 +13,8 @@ class StatesTableSeeder extends Seeder
         DB::table('states')->delete();
 
         $states = [
-            'Addis Ababa',''
+            'Addis Ababa','Oromia', 'SNNPR', 'Amhara', 'Gambella', 'Tigray', 'Somali', 'Harar', 'Diredawa', 'Benshagul', 'Afar', 'Sidamo',
+
         ];
 
         foreach ($states as $state) {
